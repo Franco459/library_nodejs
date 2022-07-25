@@ -33,6 +33,7 @@ exports.create = async(data) => {
 }
 
 exports.update = async(data, id) => {
+    let old = await this.getByID(id);
     let updatedStudent = await StudentRepository.update(data, {
         where: {
             student_ID: id
@@ -42,7 +43,7 @@ exports.update = async(data, id) => {
 }
 
 exports.delete = async (id) => {
-    let rmvStudent = await StudentRepository.delete({
+    let rmvStudent = await StudentRepository.destroy({
         where:{
             student_ID : id
         }

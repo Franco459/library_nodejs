@@ -30,21 +30,22 @@ exports.create = async (req, res) => {
     let newStudent = await StudentsDataWorker.create(data);
     res.status(200).send({
         response: newStudent
-    })
+    });
 }
 //delete de estudiante
 exports.delete = async(req, res) => {
+    const id = req.params.id;
     let deleteStudent = await StudentsDataWorker.delete(id);
-    res.status.send({
+    res.status(200).send({
         response: deleteStudent
-    })
+    });
 }
 //update de estudiante
 exports.update = async (req, res) => {
     const data = req.body;
     const id = req.params.id;
     let updatedStudent = await StudentsDataWorker.update(data, id);
-    res.status.send({
+    res.status(200).send({
         response: updatedStudent
-    })
+    });
 }
