@@ -1,4 +1,4 @@
-//modelado de students y sus caracteristicas
+//modelado de students y sus caracteristicas con Sequalize
 const Sequelize = require('sequelize'); 
 
 module.exports = function(sequelize, DataTypes) {
