@@ -26,10 +26,8 @@ exports.getByFilter = async(filters) =>{
 }
 
 exports.create = async(data) => {
-
     let newAdmin = await adminsRepository.create(data);
     return newAdmin;
-    
 }
 
 exports.update = async(data, idAdmin) => {
