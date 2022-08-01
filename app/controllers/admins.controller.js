@@ -1,6 +1,5 @@
 const AdminsDataWorker = require ("../dataworkers/admins.dataworker");
 
-
 exports.getAll = async(req, res) => {
     let allAdmins = await AdminsDataWorker.getAll();
     res.status(200).send({
